@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class ProdukDetailPage extends StatelessWidget {
   final String namaProduk;
   final int harga;
+  final IconData ikon;
 
   const ProdukDetailPage({
     super.key,
     required this.namaProduk,
     required this.harga,
+    required this.ikon,
   });
 
   @override
@@ -19,6 +21,10 @@ class ProdukDetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Center(
+              child: Icon(ikon, size: 120, color: Colors.blueGrey),
+            ),
+            const SizedBox(height: 16),
             Text(
               namaProduk,
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
